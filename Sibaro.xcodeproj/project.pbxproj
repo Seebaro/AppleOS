@@ -36,6 +36,9 @@
 		363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */; };
 		363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */; };
 		363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */; };
+		368EB6332A97CEDC004E7954 /* ProductPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368EB6322A97CEDC004E7954 /* ProductPage.swift */; };
+		368EB6352A97F06B004E7954 /* String+snakeCased.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368EB6342A97F06B004E7954 /* String+snakeCased.swift */; };
+		368EB6372A9FE512004E7954 /* URL+QueryDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368EB6362A9FE512004E7954 /* URL+QueryDictionary.swift */; };
 		36B7CE962A8FCBE1000ABD7A /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE952A8FCBE1000ABD7A /* Password.swift */; };
 		36FE9D052A8E4BC300A71B12 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */; };
 		36FE9D072A8E4BD000A71B12 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */; };
@@ -126,6 +129,9 @@
 		363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		368EB6322A97CEDC004E7954 /* ProductPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPage.swift; sourceTree = "<group>"; };
+		368EB6342A97F06B004E7954 /* String+snakeCased.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+snakeCased.swift"; sourceTree = "<group>"; };
+		368EB6362A9FE512004E7954 /* URL+QueryDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+QueryDictionary.swift"; sourceTree = "<group>"; };
 		36B7CE952A8FCBE1000ABD7A /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
@@ -329,6 +335,8 @@
 			children = (
 				117ED7002A8B87D000775CEC /* String+VersionComparison.swift */,
 				11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */,
+				368EB6342A97F06B004E7954 /* String+snakeCased.swift */,
+				368EB6362A9FE512004E7954 /* URL+QueryDictionary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -516,10 +524,10 @@
 		C604EB2A2A89396A00B18E0E /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				C604EB2E2A8939BB00B18E0E /* Base */,
 				C604EB2B2A89398900B18E0E /* Endpoints */,
 				03E248D32A8A75DE00DDE525 /* Extensions */,
 				C604EB3B2A893A9300B18E0E /* Models */,
-				C604EB2E2A8939BB00B18E0E /* Base */,
 				C604EB452A89403800B18E0E /* Services */,
 				03E248D02A8A75A300DDE525 /* Utilities */,
 			);
@@ -539,11 +547,11 @@
 		C604EB2E2A8939BB00B18E0E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C604EB332A8939BB00B18E0E /* Endpoint.swift */,
+				C604EB312A8939BB00B18E0E /* HTTPClient.swift */,
 				C604EB2F2A8939BB00B18E0E /* HTTPContentType.swift */,
 				C604EB302A8939BB00B18E0E /* HTTPMethod.swift */,
-				C604EB312A8939BB00B18E0E /* HTTPClient.swift */,
 				C604EB322A8939BB00B18E0E /* RequestError.swift */,
-				C604EB332A8939BB00B18E0E /* Endpoint.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -553,9 +561,10 @@
 			children = (
 				C604EB412A893B6600B18E0E /* Errors.swift */,
 				C604EB3C2A893A9E00B18E0E /* Login.swift */,
-				C604EB3E2A893ADB00B18E0E /* Product.swift */,
-				C6AD3FC32A8E19CE008182BC /* SubmitApp.swift */,
 				36B7CE952A8FCBE1000ABD7A /* Password.swift */,
+				C604EB3E2A893ADB00B18E0E /* Product.swift */,
+				368EB6322A97CEDC004E7954 /* ProductPage.swift */,
+				C6AD3FC32A8E19CE008182BC /* SubmitApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -677,9 +686,11 @@
 				C604EB502A89546F00B18E0E /* EmptyStateView.swift in Sources */,
 				03FDA30A2A8C169A003D192D /* Locking.swift in Sources */,
 				03FDA3242A8DD4D3003D192D /* SingleAxisGeometryReader.swift in Sources */,
+				368EB6352A97F06B004E7954 /* String+snakeCased.swift in Sources */,
 				C604EB522A895EC000B18E0E /* ProductItemView.swift in Sources */,
 				C604EB222A8932FB00B18E0E /* ProfileView.swift in Sources */,
 				117ED6F32A8B743400775CEC /* DirectoryReader.m in Sources */,
+				368EB6332A97CEDC004E7954 /* ProductPage.swift in Sources */,
 				C6AD3FBE2A8E1991008182BC /* SubmitAppView.swift in Sources */,
 				C604EB492A89407D00B18E0E /* ProductsRepository.swift in Sources */,
 				C6AD3FC22A8E19AC008182BC /* SubmitAppEndpoint.swift in Sources */,
@@ -737,6 +748,7 @@
 				36FE9D052A8E4BC300A71B12 /* ChangePasswordView.swift in Sources */,
 				C604EB162A8930C400B18E0E /* Panel.swift in Sources */,
 				C6AD3FC62A8E19FE008182BC /* SubmitAppRepository.swift in Sources */,
+				368EB6372A9FE512004E7954 /* URL+QueryDictionary.swift in Sources */,
 				36B7CE962A8FCBE1000ABD7A /* Password.swift in Sources */,
 				03FDA3222A8D5FE2003D192D /* Stored.swift in Sources */,
 				C604EB3D2A893A9E00B18E0E /* Login.swift in Sources */,

@@ -9,9 +9,19 @@ import SwiftUI
 
 enum SortType: String, CaseIterable {
     case newest = "Newest"
-    case oldest = "Oldest"
     case updated = "Updated"
     case alphabetical = "Alphabetical"
+    
+    func asProductOrderProperty() -> Product.OrderProperty {
+        switch self {
+        case .newest:
+            return .createdAt
+        case .updated:
+            return .updatedAt
+        case .alphabetical:
+            return .title
+        }
+    }
 }
 
 struct ProductsListView {
@@ -23,9 +33,9 @@ struct ProductsListView {
 
     var layout: [GridItem] {
         if horizontalSizeClass == .compact {
-            [GridItem(.flexible(), alignment: .top)]
+            return [GridItem(.flexible(), alignment: .top)]
         } else {
-            [GridItem(.adaptive(minimum: 360), alignment: .top)]
+            return [GridItem(.adaptive(minimum: 360), alignment: .top)]
         }
     }
     #else
@@ -41,6 +51,12 @@ extension ProductsListView: View {
     var body: some View {
         content
             .searchable(text: $viewModel.search)
+            .onReceive(viewModel.$search.debounce(for: .seconds(2), scheduler: DispatchQueue.main), perform: { searchQuery in
+                viewModel.searchFor(query: searchQuery)
+            })
+            .onSubmit(of: .search, {
+                print("submit")
+            })
             .overlay {
                 emptyState
             }
@@ -91,6 +107,7 @@ extension ProductsListView: View {
                     viewModel.products,
                     id: \.id
                 ) { product in
+                    
                     NavigationLink {
                         ProductDetailsView(product: product)
                     } label: {
@@ -100,7 +117,15 @@ extension ProductsListView: View {
                     }
                     .buttonStyle(.plain)
                     .disabled(viewModel.products.isEmpty)
+                    .onAppear {
+                        viewModel.rowDidAppear(withProduct: product)
+                    }
                 }
+                
+                if !viewModel.products.isEmpty {
+                    infiniteListFooterView
+                }
+                
             }
             .padding()
         }
@@ -135,6 +160,40 @@ extension ProductsListView: View {
                 }
             }
         }
+    }
+    
+    var infiniteListFooterView: some View {
+        VStack(spacing: 0) {
+            if viewModel.loading {
+                HStack {
+                    ProgressView()
+                        .progressViewStyle(.circular)
+                        .scaleEffect(0.8)
+                        .frame(alignment: .center)
+                }.frame(maxWidth: .infinity)
+            } else {
+                if !viewModel.message.isEmpty {
+                    VStack(spacing: 0) {
+                        Group {
+                            Text("loading failed")
+                            #if os(macOS)
+                            Text("click to retry")
+                            #else
+                            Text("tap to retry")
+                            #endif
+                        }.frame(maxWidth: .infinity, alignment: .center)
+                            .font(.caption2)
+                            .foregroundColor(.gray.opacity(0.8))
+                    }.clipped()
+                        .onTapGesture {
+                            viewModel.retryLoadingPage()
+                        }
+                }
+            }
+        }.id(UUID())
+            .listRowSeparator(.hidden)
+            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+        
     }
 }
 

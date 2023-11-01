@@ -24,7 +24,7 @@ struct SymbolView: View {
         Image(systemName: icon)
             .font(.largeTitle.weight(.bold))
             .background(backgroundColor)
-            .background(in: .circle.inset(by: -20))
+            .background(in: Circle().inset(by: -20))
             .foregroundStyle(.white)
     }
 }

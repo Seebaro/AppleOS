@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 extension ProductsListView {
     @MainActor
@@ -18,38 +19,41 @@ extension ProductsListView {
         @Published var sortType: SortType = .updated
         @Published var dummyProducts: [Product] = [.dummy(), .dummy(), .dummy(), .dummy()]
         @Published var rawProducts: [Product] = []
-        @Published var search: String = ""
-        
+        @Published var searchResults: [Product] = []
+        @Published var search: String = "" {
+            didSet {
+                if search.isEmpty {
+                    searchResults = []
+                }
+            }
+        }
+        private var nextPageCursor: String = ""
+        private var nextSeachCursor: String = ""
         @Published var selectedProduct: Product? = nil
         
         /// Status
         @Published var loading: Bool = false
         @Published var message: String = ""
         
+        var subscriptions: Set<AnyCancellable> = []
+        
         init(type: AppType) {
             self.type = type
+            super.init()
+            $sortType.dropFirst().sink { [weak self] _ in
+                self?.rawProducts = []
+                self?.searchResults = []
+                self?.nextPageCursor = ""
+                self?.nextSeachCursor = ""
+                self?.retryLoadingPage()
+            }.store(in: &subscriptions)
         }
         
         var products: [Product] {
-            let typeFilter = rawProducts.filter { product in
-                product.type == type
-            }
-            
             if search.isEmpty {
-                switch sortType {
-                case .newest:
-                    return typeFilter.sorted(by: { $0.createdAt > $1.createdAt })
-                case .oldest:
-                    return typeFilter.sorted(by: { $0.createdAt < $1.createdAt })
-                case .updated:
-                    return typeFilter.sorted(by: { $0.updatedAt > $1.updatedAt })
-                case .alphabetical:
-                    return typeFilter.sorted(by: { $0.title < $1.title })
-                }
+                return rawProducts
             } else {
-                return typeFilter.filter { product in
-                    product.title.localizedCaseInsensitiveContains(search)
-                }
+                return searchResults
             }
         }
         
@@ -57,7 +61,21 @@ extension ProductsListView {
             loading = true
             do {
                 message = ""
-                rawProducts = try await productRepository.products()
+                let response = try await productRepository.filterProducts(search: search, ordering: sortType.asProductOrderProperty(), type: type, cursor: search.isEmpty ? nextPageCursor: nextSeachCursor)
+                if search.isEmpty {
+                    
+                    if let nextUrl = response.next, let cursor = URL(string: nextUrl)?.queryDictionary?["cursor"] {
+                        self.nextPageCursor = cursor
+                        rawProducts.append(contentsOf: response.results)
+                    }
+                } else {
+                    
+                    if let nextUrl = response.next, let cursor = URL(string: nextUrl)?.queryDictionary?["cursor"] {
+                        self.nextSeachCursor = cursor
+                        searchResults.append(contentsOf: response.results)
+                    }
+                }
+                
             } catch {
                 #if DEBUG
                 print(error)
@@ -76,5 +94,35 @@ extension ProductsListView {
             }
             loading = false
         }
+        
+        func rowDidAppear(withProduct product: Product) {
+            Task {
+                if product == self.products.last {
+                    await getList()
+                }
+            }
+        }
+        
+        func retryLoadingPage() {
+            Task {
+                await getList()
+            }
+        }
+        
+        func searchFor(query: String) {
+            if !query.isEmpty {
+                Task {
+                    await getList()
+                }
+            }
+        }
+        
+    }
+    
+}
+
+extension String {
+    func decodeUrl() -> String? {
+        return self.removingPercentEncoding
     }
 }
