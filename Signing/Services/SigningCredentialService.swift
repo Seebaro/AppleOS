@@ -123,9 +123,11 @@ class SignerService: BaseService, SignerServicable {
         
         let properties = try getIPAProperties(ipaURL: destinationURL)
         
-        guard resign(sourcePath: destinationURL.path) == 0 else {
-            throw SigningError.resign
-        }
+        try resign(sourcePath: destinationURL, bundleIdentifier: properties.bundleID)
+        
+//        guard resign(sourcePath: .path) == 0 else {
+//            throw SigningError.resign
+//        }
         
         try fileManager.zipItem(at: destinationURL.appendingPathComponent("Payload"), to: signedIPAURL)
         
@@ -155,13 +157,37 @@ class SignerService: BaseService, SignerServicable {
         return IPAProperties(name: bundleName, version: bundleVersion, bundleID: bundleID, icon: icon)
     }
     
-    private func resign(sourcePath: String) -> Int32 {
-        return zsign(
+    private func generateEntitlements(teamID: String, profileBundleID: String) throws -> URL {
+        let entitlements = Entitlements(applicationIdentifier: teamID + "." + profileBundleID,
+                                        apsEnvironment: "production",
+                                        developerTeamID: teamID,
+                                        getTaskAllow: false,
+                                        keychainAccessGroups: ["\(teamID).*", "com.apple.token"])
+        try entitlements.save(as:
+    }
+    
+    private func resign(sourcePath: URL, bundleIdentifier: String) throws {
+        try ZSign.sign(
             sourcePath,
-            storage.cert.url.path,
-            storage.p12.url.path,
-            storage.profile.url.path,
-            p12Password
+            cert: storage.cert.url,
+            privateKey: storage.p12.url,
+            provisioningProfile: storage.profile.url,
+            entitlements: storage.entitlements.url,
+            bundleIdentifier: bundleIdentifier,
+            password: p12Password
         )
     }
 }
+
+//extension ZSign.Error: LocalizedError {
+//    var errorDescription: String? {
+//        switch self {
+//        case .invalidFolderPath:
+//            return Container.shared.i18n()?.ZSignError_InvalidFolderPath
+//       case ...:
+//            return ...
+//       default:
+//            return Container.shared.i18n()?.ZSignError_UnknownError
+//       }
+//    }
+//}

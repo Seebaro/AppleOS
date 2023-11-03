@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/EbrahimTahernejad/ZSignApple.git",
       "state" : {
-        "revision" : "c8a6e50c51d5c923bf7deb3ae36daba862306360",
-        "version" : "1.0.0"
+        "branch" : "entitlements",
+        "revision" : "43bcafff8df77e5e771adf3dd3b72ebfc46e6f40"
       }
     }
   ],

@@ -27,6 +27,7 @@
 		03FDA3202A8D470F003D192D /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA31D2A8D470F003D192D /* Factory.swift */; };
 		03FDA3222A8D5FE2003D192D /* Stored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3212A8D5FE2003D192D /* Stored.swift */; };
 		03FDA3242A8DD4D3003D192D /* SingleAxisGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */; };
+		114E16022AF5A31800092CAA /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E16012AF5A31800092CAA /* Entitlements.swift */; };
 		117ED6F32A8B743400775CEC /* DirectoryReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EB2A8B743400775CEC /* DirectoryReader.m */; };
 		117ED6F42A8B743400775CEC /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6ED2A8B743400775CEC /* ApplicationService.swift */; };
 		117ED6F52A8B743400775CEC /* SystemApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EE2A8B743400775CEC /* SystemApplication.swift */; };
@@ -125,6 +126,7 @@
 		03FDA31D2A8D470F003D192D /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		03FDA3212A8D5FE2003D192D /* Stored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stored.swift; sourceTree = "<group>"; };
 		03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAxisGeometryReader.swift; sourceTree = "<group>"; };
+		114E16012AF5A31800092CAA /* Entitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlements.swift; sourceTree = "<group>"; };
 		117ED6E02A8B741E00775CEC /* Sibaro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sibaro-Bridging-Header.h"; sourceTree = "<group>"; };
 		117ED6EB2A8B743400775CEC /* DirectoryReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryReader.m; sourceTree = "<group>"; };
 		117ED6EC2A8B743400775CEC /* DirectoryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryReader.h; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				11EEC0FA2AC6C06A006A466E /* IPAProperties.swift */,
 				11DC23CF2AC49AD200692DBC /* SigningCredentialsError.swift */,
 				11EEC0F82AC6BF17006A466E /* SigningError.swift */,
+				114E16012AF5A31800092CAA /* Entitlements.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				C604EB192A8930C400B18E0E /* MainView.swift in Sources */,
 				C6AD3FC02A8E1991008182BC /* SubmitAppViewModel.swift in Sources */,
 				C604EB362A8939BB00B18E0E /* HTTPClient.swift in Sources */,
+				114E16022AF5A31800092CAA /* Entitlements.swift in Sources */,
 				03FDA30F2A8C1952003D192D /* MainViewModel.swift in Sources */,
 				03FDA31A2A8D36A6003D192D /* Service.swift in Sources */,
 				11EEC0F92AC6BF17006A466E /* SigningError.swift in Sources */,
@@ -1084,8 +1088,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/EbrahimTahernejad/ZSignApple.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = entitlements;
+				kind = branch;
 			};
 		};
 		11EEC0EB2AC6B4A3006A466E /* XCRemoteSwiftPackageReference "swifter" */ = {
