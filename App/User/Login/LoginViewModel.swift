@@ -28,7 +28,6 @@ extension LoginView {
                 storage.username = username
                 loading = false
             } catch {
-                print(error)
                 loading = false
                 guard let error = error as? RequestError else {
                     return

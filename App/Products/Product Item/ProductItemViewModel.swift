@@ -46,7 +46,9 @@ extension ProductItemView {
                     try await install()
                 }
             } catch {
+                #if DEBUG
                 print(error)
+                #endif
             }
             loading = false
         }

@@ -17,9 +17,6 @@ extension MainView {
             super.init()
             update.updateSubject.filter { $0 }.map { _ in true }.assign(to: &$forceUpdate)
             update.updateSubject.filter { !$0 }.map { _ in true }.assign(to: &$optionalUpdate)
-            update.updateSubject.sink { forceUpdate in
-                print("forceUpdate: \(forceUpdate)")
-            }.store(in: &cancelBag)
         }
         
         var isAuthenticated: Bool {

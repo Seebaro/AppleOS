@@ -61,7 +61,6 @@ extension ChangePasswordView {
                 try await auth.changePassword(oldPassword: currentPassword, newPassword: newPassword)
                 alertStatus = .success
             } catch {
-                print(error)
                 if let error = error as? RequestError {
                     switch error {
                     case .badRequest(let data):

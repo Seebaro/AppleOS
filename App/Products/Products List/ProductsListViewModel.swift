@@ -59,9 +59,6 @@ extension ProductsListView {
                 message = ""
                 rawProducts = try await productRepository.products()
             } catch {
-                #if DEBUG
-                print(error)
-                #endif
                 if let error = error as? RequestError {
                     switch error {
                     case .unauthorized(let data):
