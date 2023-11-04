@@ -9,6 +9,7 @@ import Foundation
 
 protocol HTTPClient {
     var storage: StorageServicable { get set }
+    var update: UpdateServicable { get set }
     func sendRequest<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async throws -> T
 }
 
@@ -51,6 +52,9 @@ extension HTTPClient {
         }
         switch response.statusCode {
         case 200...299:
+            if response.value(forHTTPHeaderField: "x-can-update") == "1" {
+                update.needsUpdate(force: false, link: response.value(forHTTPHeaderField: "x-update-link"))
+            }
             do {
                 let decodedResponse = try SibaroJSONDecoder().decode(responseModel, from: data)
                 return decodedResponse
@@ -68,6 +72,9 @@ extension HTTPClient {
                 storage.logout()
             }
             throw RequestError.unauthorized(data)
+        case 410:
+            update.needsUpdate(force: true, link: response.value(forHTTPHeaderField: "x-update-link"))
+            throw RequestError.needsUpdate
         default:
             throw RequestError.unexpectedStatusCode(response.statusCode)
         }

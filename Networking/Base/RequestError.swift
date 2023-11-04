@@ -14,6 +14,7 @@ public enum RequestError: Error {
     case badRequest(Data)
     case unauthorized(Data)
     case unexpectedStatusCode(Int)
+    case needsUpdate
     case unknown(String)
 }
 
@@ -32,6 +33,8 @@ extension RequestError: LocalizedError {
             return NSLocalizedString("Session expired", comment: "no response")
         case .unexpectedStatusCode(let status):
             return NSLocalizedString("Unexpected Status Code \(status) occured", comment: "")
+        case .needsUpdate:
+            return NSLocalizedString("Needs Update", comment: "")
         case .unknown(let message):
             return NSLocalizedString(message, comment: "")
         }

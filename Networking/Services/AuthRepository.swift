@@ -25,6 +25,7 @@ protocol AuthRepositoryType: BaseService {
 
 class AuthRepository: BaseService, HTTPClient, AuthRepositoryType {
     @Injected(\.storage) var storage
+    @Injected(\.update) var update
     
     func login(
         username: String,
