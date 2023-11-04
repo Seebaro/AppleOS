@@ -2,8 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleName</key>
+	<string>$(APP_NAME)</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>IsDebug</key>
+	<string>$(RUNTIME_IS_DEBUG)</string>
+	<key>OneSignalAppID</key>
+	<string>$(ONESIGNAL_APP_ID)</string>
 	<key>NSUserNotificationsUsageDescription</key>
-	<string>If you want get informed about your apps update please accept push notification permission.</string>
+	<string>If you want to be informed about your app&apos;s update please accept push notification permission.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

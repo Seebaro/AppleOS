@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.$(CONFIG_BUNDLE_ID).onesignal</string>
+		<string>group.$(BUNDLE_ID).onesignal</string>
 	</array>
 </dict>
 </plist>
