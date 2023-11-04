@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import OneSignalFramework
 
 extension LoginView {
     @MainActor
@@ -24,6 +25,7 @@ extension LoginView {
             loading = true
             do {
                 let response = try await auth.login(username: username, password: password)
+                OneSignal.login(externalId: "\(response.userId)", token: response.access)
                 storage.token = response.access
                 storage.username = username
                 loading = false

@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Sentry
-
 import OneSignalFramework
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -32,10 +31,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func setupPushNotification(_ launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
-        // Remove this method to stop OneSignal Debugging
+        #if DEBUG
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
-        
-        // OneSignal initialization
+        #endif
         OneSignal.initialize(oneSignalAppID, withLaunchOptions: launchOptions)
         
         // requestPermission will show the native iOS notification permission prompt.
@@ -43,8 +41,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
         }, fallbackToSettings: true)
-        
-        // Login your customer with externalId
-        // OneSignal.login("EXTERNAL_ID")
     }
 }
