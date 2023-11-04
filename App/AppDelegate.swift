@@ -17,23 +17,31 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     private func setupLogger() {
+        guard let sentryDSN else { return }
         SentrySDK.start { options in
             options.dsn = sentryDSN
             options.debug = isDebug // Enabled debug when first installing is always helpful
+            options.environment = isDebug ? "DEVELOPMENT" : "PRODUCTION"
+            options.diagnosticLevel = isDebug ? .debug : .error
+            options.tracesSampleRate = 1.0
+            options.profilesSampleRate = 1.0
+            options.dist = "@c"
+            options.attachScreenshot = true
+            options.attachViewHierarchy = true
             options.enableTracing = true
-
-            // Uncomment the following lines to add more data to your events
-            // options.attachScreenshot = true // This adds a screenshot to the error events
-            // options.attachViewHierarchy = true // This adds the view hierarchy to the error events
+            options.enablePreWarmedAppStartTracing = true
+            options.enableCaptureFailedRequests = true
+            options.enableTimeToFullDisplayTracing = true
+            options.swiftAsyncStacktraces = true
+            options.enableMetricKit = true
         }
-        // Remove the next line after confirming that your Sentry integration is working.
-        SentrySDK.capture(message: "This app uses Sentry! :)")
     }
     
     private func setupPushNotification(_ launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
         #if DEBUG
         OneSignal.Debug.setLogLevel(.LL_VERBOSE)
         #endif
+        guard let oneSignalAppID else { return }
         OneSignal.initialize(oneSignalAppID, withLaunchOptions: launchOptions)
         
         // requestPermission will show the native iOS notification permission prompt.

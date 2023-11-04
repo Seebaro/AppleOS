@@ -11,10 +11,10 @@ var isDebug: Bool {
     return Bundle.main.info(for: "IsDebug") == "true" ? true : false
 }
 
-var oneSignalAppID: String {
+var oneSignalAppID: String? {
     return Bundle.main.info(for: "OneSignalAppID")
 }
 
-var sentryDSN: String {
+var sentryDSN: String? {
     return Bundle.main.info(for: "SentryDSN")
 }
