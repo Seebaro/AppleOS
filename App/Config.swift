@@ -14,3 +14,7 @@ var isDebug: Bool {
 var oneSignalAppID: String {
     return Bundle.main.info(for: "OneSignalAppID")
 }
+
+var sentryDSN: String {
+    return Bundle.main.info(for: "SentryDSN")
+}

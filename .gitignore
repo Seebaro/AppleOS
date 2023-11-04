@@ -94,3 +94,4 @@ Sibaro.xcodeproj/xcuserdata
 SibaroTests/Mock/*
 Config.xcconfig
 Production.xcconfig
+.sentryclirc

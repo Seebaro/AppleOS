@@ -10,6 +10,8 @@
 	<string>$(RUNTIME_IS_DEBUG)</string>
 	<key>OneSignalAppID</key>
 	<string>$(ONESIGNAL_APP_ID)</string>
+	<key>SentryDSN</key>
+	<string>$(SENTRY_DSN)</string>
 	<key>NSUserNotificationsUsageDescription</key>
 	<string>If you want to be informed about your app&apos;s update please accept push notification permission.</string>
 	<key>UIBackgroundModes</key>
