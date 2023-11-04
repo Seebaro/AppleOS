@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "onesignal-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Seebaro/OneSignal-iOS-SDK",
+      "state" : {
+        "revision" : "ac4b1a89cf4a411a0ca99ab1ace678a397724a42",
+        "version" : "5.0.2"
+      }
+    },
+    {
       "identity" : "simplekeychain",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/auth0/SimpleKeychain",
