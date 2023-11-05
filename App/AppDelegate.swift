@@ -28,6 +28,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             options.dist = "@c"
             options.attachScreenshot = true
             options.attachViewHierarchy = true
+            options.enableCrashHandler = true
             options.enableTracing = true
             options.enablePreWarmedAppStartTracing = true
             options.enableCaptureFailedRequests = true
