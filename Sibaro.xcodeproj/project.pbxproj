@@ -25,6 +25,7 @@
 		03FDA3202A8D470F003D192D /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA31D2A8D470F003D192D /* Factory.swift */; };
 		03FDA3222A8D5FE2003D192D /* Stored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3212A8D5FE2003D192D /* Stored.swift */; };
 		03FDA3242A8DD4D3003D192D /* SingleAxisGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */; };
+		114E16062AF6407800092CAA /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E16052AF6407800092CAA /* Bundle.swift */; };
 		117ED6F32A8B743400775CEC /* DirectoryReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EB2A8B743400775CEC /* DirectoryReader.m */; };
 		117ED6F42A8B743400775CEC /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6ED2A8B743400775CEC /* ApplicationService.swift */; };
 		117ED6F52A8B743400775CEC /* SystemApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EE2A8B743400775CEC /* SystemApplication.swift */; };
@@ -32,7 +33,13 @@
 		117ED6F72A8B743400775CEC /* Invocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6F22A8B743400775CEC /* Invocator.m */; };
 		117ED6FA2A8B74FE00775CEC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117ED6F92A8B74FE00775CEC /* MobileCoreServices.framework */; platformFilter = ios; };
 		117ED7012A8B87D000775CEC /* String+VersionComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED7002A8B87D000775CEC /* String+VersionComparison.swift */; };
+		1183A69B2AE1EC9900E2AD99 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183A69A2AE1EC9900E2AD99 /* NotificationService.swift */; };
+		1183A69F2AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1183A6AC2AE1ED1800E2AD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183A6AB2AE1ED1800E2AD99 /* AppDelegate.swift */; };
+		11C24C012AF652A60060020A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C24C002AF652A60060020A /* Config.swift */; };
 		11D5D8E52A8BBC6300A3C22B /* Dictionary+Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */; };
+		11E619532AE3CF16001F353B /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 11E619522AE3CF16001F353B /* OneSignalExtension */; };
+		11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 11E619542AE3CF16001F353B /* OneSignalFramework */; };
 		363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */; };
 		363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */; };
 		363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */; };
@@ -89,7 +96,32 @@
 		C6AD3FC42A8E19CE008182BC /* SubmitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD3FC32A8E19CE008182BC /* SubmitApp.swift */; };
 		C6AD3FC62A8E19FE008182BC /* SubmitAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD3FC52A8E19FE008182BC /* SubmitAppRepository.swift */; };
 		C6CF976A2A8BDB090035210F /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF97692A8BDB090035210F /* HapticFeedback.swift */; };
+		7C192DF34DA44665ADB1B7A4 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = CF776C1F205844B1BEF00C35 /* Sentry */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1183A69D2AE1EC9900E2AD99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C604EAF62A892FDA00B18E0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1183A6972AE1EC9900E2AD99;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1183A6A02AE1EC9900E2AD99 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1183A69F2AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03E248D12A8A75BD00DDE525 /* SibaroJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SibaroJSONDecoder.swift; sourceTree = "<group>"; };
@@ -110,6 +142,9 @@
 		03FDA31D2A8D470F003D192D /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		03FDA3212A8D5FE2003D192D /* Stored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stored.swift; sourceTree = "<group>"; };
 		03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAxisGeometryReader.swift; sourceTree = "<group>"; };
+		114E16052AF6407800092CAA /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		114E16072AF640CF00092CAA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		114E16082AF640DB00092CAA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		117ED6E02A8B741E00775CEC /* Sibaro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sibaro-Bridging-Header.h"; sourceTree = "<group>"; };
 		117ED6EB2A8B743400775CEC /* DirectoryReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryReader.m; sourceTree = "<group>"; };
 		117ED6EC2A8B743400775CEC /* DirectoryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryReader.h; sourceTree = "<group>"; };
@@ -125,6 +160,13 @@
 		117ED6FE2A8B755E00775CEC /* LSResourceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSResourceProxy.h; sourceTree = "<group>"; };
 		117ED6FF2A8B755E00775CEC /* LSApplicationWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSApplicationWorkspace.h; sourceTree = "<group>"; };
 		117ED7002A8B87D000775CEC /* String+VersionComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+VersionComparison.swift"; sourceTree = "<group>"; };
+		1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1183A69A2AE1EC9900E2AD99 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		1183A69C2AE1EC9900E2AD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1183A6A92AE1ECCE00E2AD99 /* Sibaro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Sibaro-Info.plist"; sourceTree = "<group>"; };
+		1183A6AA2AE1ECE700E2AD99 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		1183A6AB2AE1ED1800E2AD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11C24C002AF652A60060020A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Apps.swift"; sourceTree = "<group>"; };
 		363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -136,7 +178,7 @@
 		36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		474D63712AAC4FD60003AF6D /* ObservableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableScrollView.swift; sourceTree = "<group>"; };
-		C604EAFE2A892FDA00B18E0E /* Seebaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seebaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seebaro Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C604EB012A892FDA00B18E0E /* SibaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SibaroApp.swift; sourceTree = "<group>"; };
 		C604EB052A892FDD00B18E0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C604EB072A892FDD00B18E0E /* Sibaro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sibaro.entitlements; sourceTree = "<group>"; };
@@ -173,7 +215,7 @@
 		C662A5552AB30130001A8FEE /* ScreenshotPortraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotPortraitView.swift; sourceTree = "<group>"; };
 		C667B4D22A897F1300B2427D /* ProductDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsView.swift; sourceTree = "<group>"; };
 		C667B4D52A89873400B2427D /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		C67979712A8A99180091BE25 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C67979712A8A99180091BE25 /* Shared.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Shared.xcconfig; sourceTree = "<group>"; };
 		C67E59A02ABB5964009FCC86 /* Shimmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shimmer.swift; sourceTree = "<group>"; };
 		C6AD3FBB2A8E1991008182BC /* SubmitAppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAppView.swift; sourceTree = "<group>"; };
 		C6AD3FBD2A8E1991008182BC /* SubmitAppViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAppViewModel.swift; sourceTree = "<group>"; };
@@ -184,6 +226,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1183A6952AE1EC9900E2AD99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E619532AE3CF16001F353B /* OneSignalExtension in Frameworks */,
+				7C192DF34DA44665ADB1B7A4 /* Sentry in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C604EAFB2A892FDA00B18E0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,7 +243,9 @@
 				C67979792A8AA6E00091BE25 /* NukeUI in Frameworks */,
 				C67979752A8AA6E00091BE25 /* Nuke in Frameworks */,
 				C604EB4E2A894AE400B18E0E /* SimpleKeychain in Frameworks */,
+				11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */,
 				C62BF8012A8A3059002CFFF9 /* MarkdownUI in Frameworks */,
+				7C192DF34DA44665ADB1B7A4 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +394,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		114E16042AF63F4A00092CAA /* XcodeConfigs */ = {
+			isa = PBXGroup;
+			children = (
+				C67979712A8A99180091BE25 /* Shared.xcconfig */,
+				114E16082AF640DB00092CAA /* Development.xcconfig */,
+				114E16072AF640CF00092CAA /* Production.xcconfig */,
+			);
+			path = XcodeConfigs;
+			sourceTree = "<group>";
+		};
 		117ED6E42A8B743400775CEC /* Private Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +440,16 @@
 				117ED6F92A8B74FE00775CEC /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1183A6992AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				1183A6AA2AE1ECE700E2AD99 /* OneSignalNotificationServiceExtension.entitlements */,
+				1183A69A2AE1EC9900E2AD99 /* NotificationService.swift */,
+				1183A69C2AE1EC9900E2AD99 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 		11D5D8E62A8BBD3F00A3C22B /* Applications */ = {
@@ -429,7 +502,8 @@
 		C604EAF52A892FDA00B18E0E = {
 			isa = PBXGroup;
 			children = (
-				C67979712A8A99180091BE25 /* Config.xcconfig */,
+				1183A6A92AE1ECCE00E2AD99 /* Sibaro-Info.plist */,
+				114E16042AF63F4A00092CAA /* XcodeConfigs */,
 				C604EB002A892FDA00B18E0E /* App */,
 				03FDA2EF2A8BE9A6003D192D /* Service Base */,
 				C604EB2A2A89396A00B18E0E /* Networking */,
@@ -437,6 +511,7 @@
 				11D5D8E62A8BBD3F00A3C22B /* Applications */,
 				03E248DE2A8A9C6E00DDE525 /* Storage */,
 				117ED6E02A8B741E00775CEC /* Sibaro-Bridging-Header.h */,
+				1183A6992AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension */,
 				C604EAFF2A892FDA00B18E0E /* Products */,
 				117ED6F82A8B74FE00775CEC /* Frameworks */,
 			);
@@ -445,7 +520,8 @@
 		C604EAFF2A892FDA00B18E0E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C604EAFE2A892FDA00B18E0E /* Seebaro.app */,
+				C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */,
+				1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -459,8 +535,10 @@
 				C604EB202A8932E900B18E0E /* User */,
 				C604EB1A2A89314900B18E0E /* Products */,
 				C604EB102A89309700B18E0E /* Resources */,
-				C604EB012A892FDA00B18E0E /* SibaroApp.swift */,
+				11C24C002AF652A60060020A /* Config.swift */,
 				03FDA2F62A8C110A003D192D /* SibaroAppServices.swift */,
+				C604EB012A892FDA00B18E0E /* SibaroApp.swift */,
+				1183A6AB2AE1ED1800E2AD99 /* AppDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -585,6 +663,7 @@
 				C61B1ADB2A8E805800F3AD27 /* NSTextView+Extensions.swift */,
 				C667B4D52A89873400B2427D /* String+Extensions.swift */,
 				C60FFD732AA8ECD400A51D38 /* View+Extensions.swift */,
+				114E16052AF6407800092CAA /* Bundle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -601,6 +680,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1183A6972AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1183A6A32AE1EC9900E2AD99 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				1183A6942AE1EC9900E2AD99 /* Sources */,
+				1183A6952AE1EC9900E2AD99 /* Frameworks */,
+				1183A6962AE1EC9900E2AD99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			packageProductDependencies = (
+				11E619522AE3CF16001F353B /* OneSignalExtension */,
+			);
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C604EAFD2A892FDA00B18E0E /* Sibaro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C604EB0D2A892FDD00B18E0E /* Build configuration list for PBXNativeTarget "Sibaro" */;
@@ -608,10 +707,13 @@
 				C604EAFA2A892FDA00B18E0E /* Sources */,
 				C604EAFB2A892FDA00B18E0E /* Frameworks */,
 				C604EAFC2A892FDA00B18E0E /* Resources */,
+				1183A6A02AE1EC9900E2AD99 /* Embed Foundation Extensions */,
+				1BC630DC5676446B99695BD6 /* Upload Debug Symbols to Sentry */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1183A69E2AE1EC9900E2AD99 /* PBXTargetDependency */,
 			);
 			name = Sibaro;
 			packageProductDependencies = (
@@ -619,9 +721,11 @@
 				C62BF8002A8A3059002CFFF9 /* MarkdownUI */,
 				C67979742A8AA6E00091BE25 /* Nuke */,
 				C67979782A8AA6E00091BE25 /* NukeUI */,
+				11E619542AE3CF16001F353B /* OneSignalFramework */,
+				CF776C1F205844B1BEF00C35 /* Sentry */,
 			);
 			productName = Sibaro;
-			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro.app */;
+			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -634,6 +738,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					1183A6972AE1EC9900E2AD99 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					C604EAFD2A892FDA00B18E0E = {
 						CreatedOnToolsVersion = 15.0;
 						LastSwiftMigration = 1420;
@@ -653,17 +760,27 @@
 				C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
 				C62BF7FF2A8A3059002CFFF9 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
 				C67979732A8AA6E00091BE25 /* XCRemoteSwiftPackageReference "Nuke" */,
+				11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = C604EAFF2A892FDA00B18E0E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C604EAFD2A892FDA00B18E0E /* Sibaro */,
+				1183A6972AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1183A6962AE1EC9900E2AD99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C604EAFC2A892FDA00B18E0E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -676,6 +793,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1183A6942AE1EC9900E2AD99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1183A69B2AE1EC9900E2AD99 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C604EAFA2A892FDA00B18E0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -716,6 +841,7 @@
 				C61B1ADC2A8E805800F3AD27 /* NSTextView+Extensions.swift in Sources */,
 				C604EB472A89406D00B18E0E /* AuthRepository.swift in Sources */,
 				363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */,
+				1183A6AC2AE1ED1800E2AD99 /* AppDelegate.swift in Sources */,
 				117ED6F62A8B743400775CEC /* EmbeddableSystemApplicationManager.swift in Sources */,
 				C604EB022A892FDA00B18E0E /* SibaroApp.swift in Sources */,
 				C604EB422A893B6600B18E0E /* Errors.swift in Sources */,
@@ -743,7 +869,9 @@
 				C60FFD782AA8EDBC00A51D38 /* ImagePreviewerView.swift in Sources */,
 				C604EB242A89333800B18E0E /* LoginView.swift in Sources */,
 				03E248DD2A8A9C4F00DDE525 /* I18nService.swift in Sources */,
+				11C24C012AF652A60060020A /* Config.swift in Sources */,
 				03FDA3202A8D470F003D192D /* Factory.swift in Sources */,
+				114E16062AF6407800092CAA /* Bundle.swift in Sources */,
 				C604EB2D2A89399700B18E0E /* AuthEndpoint.swift in Sources */,
 				36FE9D052A8E4BC300A71B12 /* ChangePasswordView.swift in Sources */,
 				C604EB162A8930C400B18E0E /* Panel.swift in Sources */,
@@ -760,10 +888,79 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1183A69E2AE1EC9900E2AD99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1183A6972AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 1183A69D2AE1EC9900E2AD99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		C604EB0B2A892FDD00B18E0E /* Debug */ = {
+		1183A6A12AE1EC9900E2AD99 /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67979712A8A99180091BE25 /* Config.xcconfig */;
+			baseConfigurationReference = 114E16082AF640DB00092CAA /* Development.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Development;
+		};
+		1183A6A22AE1EC9900E2AD99 /* Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114E16072AF640CF00092CAA /* Production.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 4LBD36HY9T;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Production;
+		};
+		C604EB0B2A892FDD00B18E0E /* Development */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 114E16082AF640DB00092CAA /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -818,14 +1015,15 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Development;
 		};
-		C604EB0C2A892FDD00B18E0E /* Release */ = {
+		C604EB0C2A892FDD00B18E0E /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67979712A8A99180091BE25 /* Config.xcconfig */;
+			baseConfigurationReference = 114E16072AF640CF00092CAA /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -873,25 +1071,28 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
-			name = Release;
+			name = Production;
 		};
-		C604EB0E2A892FDD00B18E0E /* Debug */ = {
+		C604EB0E2A892FDD00B18E0E /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67979712A8A99180091BE25 /* Config.xcconfig */;
+			baseConfigurationReference = 114E16082AF640DB00092CAA /* Development.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = App/Resources/Sibaro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(CONFIG_APP_BUNDLE_VERSION)";
+				CURRENT_PROJECT_VERSION = "$(APP_BUNDLE_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "$(CONFIG_DEV_TEAM)";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sibaro-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -906,9 +1107,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = "$(CONFIG_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CONFIG_BUNDLE_ID)";
-				PRODUCT_NAME = "$(CONFIG_APP_NAME)";
+				MARKETING_VERSION = "$(APP_VERSION)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -917,24 +1118,27 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 			};
-			name = Debug;
+			name = Development;
 		};
-		C604EB0F2A892FDD00B18E0E /* Release */ = {
+		C604EB0F2A892FDD00B18E0E /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67979712A8A99180091BE25 /* Config.xcconfig */;
+			baseConfigurationReference = 114E16072AF640CF00092CAA /* Production.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = App/Resources/Sibaro.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(CONFIG_APP_BUNDLE_VERSION)";
+				CURRENT_PROJECT_VERSION = "$(APP_BUNDLE_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "$(CONFIG_DEV_TEAM)";
+				DEVELOPMENT_TEAM = 4LBD36HY9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Sibaro-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -949,9 +1153,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = "$(CONFIG_APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(CONFIG_BUNDLE_ID)";
-				PRODUCT_NAME = "$(CONFIG_APP_NAME)";
+				MARKETING_VERSION = "$(APP_VERSION)";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID)";
+				PRODUCT_NAME = "$(APP_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -959,33 +1163,51 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Sibaro-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 			};
-			name = Release;
+			name = Production;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1183A6A32AE1EC9900E2AD99 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1183A6A12AE1EC9900E2AD99 /* Development */,
+				1183A6A22AE1EC9900E2AD99 /* Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Production;
+		};
 		C604EAF92A892FDA00B18E0E /* Build configuration list for PBXProject "Sibaro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C604EB0B2A892FDD00B18E0E /* Debug */,
-				C604EB0C2A892FDD00B18E0E /* Release */,
+				C604EB0B2A892FDD00B18E0E /* Development */,
+				C604EB0C2A892FDD00B18E0E /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		C604EB0D2A892FDD00B18E0E /* Build configuration list for PBXNativeTarget "Sibaro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C604EB0E2A892FDD00B18E0E /* Debug */,
-				C604EB0F2A892FDD00B18E0E /* Release */,
+				C604EB0E2A892FDD00B18E0E /* Development */,
+				C604EB0F2A892FDD00B18E0E /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Seebaro/OneSignal-iOS-SDK";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
 		C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/SimpleKeychain";
@@ -1010,9 +1232,27 @@
 				minimumVersion = 12.1.5;
 			};
 		};
+		2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		11E619522AE3CF16001F353B /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		11E619542AE3CF16001F353B /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
 		C604EB4D2A894AE400B18E0E /* SimpleKeychain */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
@@ -1033,7 +1273,30 @@
 			package = C67979732A8AA6E00091BE25 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = NukeUI;
 		};
+		CF776C1F205844B1BEF00C35 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BC630DC5676446B99695BD6 /* Upload Debug Symbols to Sentry */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Upload Debug Symbols to Sentry";
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This script is responsable to upload debug symbols and source context for Sentry.\nif which sentry-cli >/dev/null; then\nexport SENTRY_ORG=seebaro\nexport SENTRY_PROJECT=apple-ios\nERROR=$(sentry-cli debug-files upload --include-sources \"$DWARF_DSYM_FOLDER_PATH\" 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"warning: sentry-cli - $ERROR\"\nfi\nelse\necho \"warning: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 	};
 	rootObject = C604EAF62A892FDA00B18E0E /* Project object */;
 }

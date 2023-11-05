@@ -90,7 +90,7 @@ struct ProfileView: View {
             
             Section {
                 /// Feedback
-                Link(destination: URL(string: "https://github.com/emranovin/Sibaro-iOS/issues")!) {
+                Link(destination: URL(string: "https://github.com/Seebaro/AppleOS/issues")!) {
                     SettingsItemView(
                         icon: "exclamationmark.bubble.fill",
                         color: .purple,
@@ -100,7 +100,7 @@ struct ProfileView: View {
                 }
                 
                 /// SourceCode
-                Link(destination: URL(string: "https://github.com/emranovin/Sibaro-iOS/")!) {
+                Link(destination: URL(string: "https://github.com/Seebaro/AppleOS/")!) {
                     SettingsItemView(
                         icon: "curlybraces",
                         color: .white,

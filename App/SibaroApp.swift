@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct SibaroApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var i18n: I18nService = I18nService()
     
     var body: some Scene {

@@ -1,0 +1,18 @@
+//
+//  Staging.xcconfig
+//  Sibaro
+//
+//  Created by Emran on 11/4/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Shared.xcconfig"
+
+BUNDLE_ID = $(BASE_BUNDLE_ID).$(DEV_ACCOUNT).dev
+APP_NAME = Seebaro Dev
+APP_ICON = AppIconDev
+RUNTIME_IS_DEBUG = true
+ONESIGNAL_APP_ID = YOUR_ONESIGNAL_APP_ID
+SENTRY_DSN = YOUR_SENTRY_DATA_SOURCE_NAME

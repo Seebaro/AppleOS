@@ -66,14 +66,14 @@ extension ProductsListView {
                     
                     if let nextUrl = response.next, let cursor = URL(string: nextUrl)?.queryDictionary?["cursor"] {
                         self.nextPageCursor = cursor
-                        rawProducts.append(contentsOf: response.results)
                     }
+                    rawProducts.append(contentsOf: response.results)
                 } else {
                     
                     if let nextUrl = response.next, let cursor = URL(string: nextUrl)?.queryDictionary?["cursor"] {
                         self.nextSeachCursor = cursor
-                        searchResults.append(contentsOf: response.results)
                     }
+                    searchResults.append(contentsOf: response.results)
                 }
                 
             } catch {

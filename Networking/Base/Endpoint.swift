@@ -8,7 +8,7 @@
 import Foundation
 
 struct SibaroAPI {
-    static let url: String = "sibaro.mahsa.me"
+    static let url: String = "seebaro.ir"
     static let appVersion: String = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "0.0.1"
 }
 
