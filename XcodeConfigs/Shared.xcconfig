@@ -9,8 +9,8 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // MARK: - App versions
-APP_VERSION = 0.3.0
-APP_BUNDLE_VERSION = 3
+APP_VERSION = 0.4.0
+APP_BUNDLE_VERSION = 4
 
 // MARK: - App display name
 APP_NAME = Seebaro
