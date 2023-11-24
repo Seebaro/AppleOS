@@ -9,4 +9,5 @@ import Foundation
 
 struct LoginResult: Codable {
     let refresh, access: String
+    let userId: Int
 }

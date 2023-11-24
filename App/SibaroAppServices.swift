@@ -24,6 +24,9 @@ extension Container {
     
     var applications: Factory<ApplicationServicable> {
         Factory(self) { ApplicationService() }
+    }   
+    var update: Factory<UpdateServicable> {
+        Factory(self) { UpdateService() }
     }
 }
 

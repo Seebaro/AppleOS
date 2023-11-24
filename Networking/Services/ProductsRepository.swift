@@ -14,6 +14,7 @@ protocol ProductsRepositoryType {
 
 class ProductsRepository: BaseService, HTTPClient, ProductsRepositoryType {
     @Injected(\.storage) var storage
+    @Injected(\.update) var update
     
     func products() async throws -> [Product] {
         return try await sendRequest(

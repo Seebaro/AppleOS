@@ -9,12 +9,16 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // MARK: - App versions
-CONFIG_APP_VERSION = 0.2.0
-CONFIG_APP_BUNDLE_VERSION = 2
+APP_VERSION = 0.4.0
+APP_BUNDLE_VERSION = 4
 
 // MARK: - App display name
-CONFIG_APP_NAME = Seebaro
+APP_NAME = Seebaro
 
 // MARK: - App Bundle Identifier
-CONFIG_BUNDLE_ID = com.app.sibaro
-CONFIG_DEV_TEAM = YOUR_TEAM_ID
+BASE_BUNDLE_ID = com.seebaro.app
+DEV_TEAM = 4LBD36HY9T
+DEV_ACCOUNT = huzai
+
+// MARK: - App URL Scheme
+URL_SCHEME = seebaro

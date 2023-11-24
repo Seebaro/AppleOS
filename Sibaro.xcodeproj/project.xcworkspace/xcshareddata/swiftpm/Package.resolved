@@ -19,6 +19,24 @@
       }
     },
     {
+      "identity" : "onesignal-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Seebaro/OneSignal-iOS-SDK",
+      "state" : {
+        "revision" : "ac4b1a89cf4a411a0ca99ab1ace678a397724a42",
+        "version" : "5.0.2"
+      }
+    },
+    {
+      "identity" : "sentry-cocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/getsentry/sentry-cocoa/",
+      "state" : {
+        "revision" : "008325304ada69fa32aa7aeba967b65984f30569",
+        "version" : "8.14.2"
+      }
+    },
+    {
       "identity" : "simplekeychain",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/auth0/SimpleKeychain",
@@ -34,15 +52,6 @@
       "state" : {
         "revision" : "5df8a4adedd6ae4eb2455ef60ff75183984daeb8",
         "version" : "2.2.0"
-      }
-    },
-    {
-      "identity" : "swiftui-shimmer",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/markiv/SwiftUI-Shimmer/",
-      "state" : {
-        "revision" : "17b66b0e7d94d2d3f220bbcb021b5026436f06c7",
-        "version" : "1.3.0"
       }
     }
   ],
