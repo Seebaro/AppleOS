@@ -53,6 +53,15 @@
         "revision" : "5df8a4adedd6ae4eb2455ef60ff75183984daeb8",
         "version" : "2.2.0"
       }
+    },
+    {
+      "identity" : "toast-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BastiaanJansen/toast-swift",
+      "state" : {
+        "revision" : "a24a15677179e66be1a8b45f4c6b21001fbb6ab2",
+        "version" : "2.0.0"
+      }
     }
   ],
   "version" : 2

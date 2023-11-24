@@ -126,10 +126,14 @@ struct Screenshot: Codable {
 }
 
 struct AppManifest: Codable {
-    let manifest: String
+    let manifest: String?
     
     var url: URL? {
-        URL(string: "itms-services://?action=download-manifest&url=\(manifest)")
+        if let manifest {
+            URL(string: "itms-services://?action=download-manifest&url=\(manifest)")
+        } else {
+            nil
+        }
     }
 }
 

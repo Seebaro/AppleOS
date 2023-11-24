@@ -18,7 +18,7 @@ extension ProductsEndpoint: Endpoint {
         case .applications:
             return "/api/applications/"
         case .appManifest(let id):
-            return "/api/applications/\(id)/"
+            return "/api/applications/\(id)/sign/"
         }
     }
     

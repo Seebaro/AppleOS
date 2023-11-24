@@ -46,6 +46,7 @@
 		363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */; };
 		363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */; };
 		363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */; };
+		367E42A42B11214C00BE5D3A /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 367E42A32B11214C00BE5D3A /* Toast */; };
 		36B7CE962A8FCBE1000ABD7A /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE952A8FCBE1000ABD7A /* Password.swift */; };
 		36FE9D052A8E4BC300A71B12 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */; };
 		36FE9D072A8E4BD000A71B12 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */; };
@@ -240,6 +241,7 @@
 				11EA59252AF6DA7A004E40AE /* Sentry in Frameworks */,
 				117ED6FA2A8B74FE00775CEC /* MobileCoreServices.framework in Frameworks */,
 				C67979792A8AA6E00091BE25 /* NukeUI in Frameworks */,
+				367E42A42B11214C00BE5D3A /* Toast in Frameworks */,
 				C67979752A8AA6E00091BE25 /* Nuke in Frameworks */,
 				C604EB4E2A894AE400B18E0E /* SimpleKeychain in Frameworks */,
 				11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */,
@@ -720,6 +722,7 @@
 				C67979782A8AA6E00091BE25 /* NukeUI */,
 				11E619542AE3CF16001F353B /* OneSignalFramework */,
 				CF776C1F205844B1BEF00C35 /* Sentry */,
+				367E42A32B11214C00BE5D3A /* Toast */,
 			);
 			productName = Sibaro;
 			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */;
@@ -759,6 +762,7 @@
 				C67979732A8AA6E00091BE25 /* XCRemoteSwiftPackageReference "Nuke" */,
 				11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
 				2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				367E42A22B11214C00BE5D3A /* XCRemoteSwiftPackageReference "toast-swift" */,
 			);
 			productRefGroup = C604EAFF2A892FDA00B18E0E /* Products */;
 			projectDirPath = "";
@@ -918,7 +922,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4LBD36HY9T;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -1103,7 +1107,7 @@
 				CURRENT_PROJECT_VERSION = "$(APP_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4LBD36HY9T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sibaro-Info.plist";
@@ -1229,6 +1233,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		367E42A22B11214C00BE5D3A /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/SimpleKeychain";
@@ -1265,6 +1277,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalFramework;
+		};
+		367E42A32B11214C00BE5D3A /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 367E42A22B11214C00BE5D3A /* XCRemoteSwiftPackageReference "toast-swift" */;
+			productName = Toast;
 		};
 		C604EB4D2A894AE400B18E0E /* SimpleKeychain */ = {
 			isa = XCSwiftPackageProductDependency;

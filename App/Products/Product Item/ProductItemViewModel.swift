@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Toast
 
 extension ProductItemView {
     @MainActor
@@ -27,13 +27,14 @@ extension ProductItemView {
             self.product = product
         }
         
-        private func install() async throws {
+        @discardableResult private func install() async throws -> Bool {
             let manifest = try await productRepository.getManifest(
                 id: product.id
             )
             if let manifest {
                 let _ = openURL(manifest)
             }
+            return manifest != nil
         }
         
         private func _handleApplicationAction() async {
@@ -43,7 +44,19 @@ extension ProductItemView {
                 case .open :
                     applications.openApplication(product.bundleIdentifier)
                 default :
-                    try await install()
+                    let num_retries = 6
+                    for i in 0..<num_retries {
+                        let gotManifest = try await install()
+                        if gotManifest {
+                            break
+                        } else if i == num_retries - 1 {
+                            let toast = Toast.text("در حال آماده‌سازی اپلیکیشن", subtitle:"لطفا چند دقیقه دیگه تلاش کنید")
+                            toast.show()
+                            break
+                        } else {
+                            try await Task.sleep(nanoseconds: UInt64(5_000_000_000))
+                        }
+                    }
                 }
             } catch {
                 #if DEBUG
