@@ -20,7 +20,7 @@ extension MainView {
         }
         
         var isAuthenticated: Bool {
-            storage.token != nil
+            storage.token != nil && storage.username != nil
         }
         
         func updateApplication() {
