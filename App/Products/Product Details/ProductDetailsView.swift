@@ -214,7 +214,7 @@ struct ProductDetailsView: View {
     private var screenshots: some View {
         ScrollView(.horizontal) {
             HStack {
-                ForEach(viewModel.product.screenshots, id: \.id) { screenshot in
+                ForEach(viewModel.product.screenshots) { screenshot in
                     Button {
                         viewModel.previewURL = screenshot.url
                         #if os(macOS)

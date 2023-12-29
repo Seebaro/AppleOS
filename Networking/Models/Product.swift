@@ -88,7 +88,7 @@ enum AppType: String, Codable {
     case game = "game"
 }
 
-struct Screenshot: Codable {
+struct Screenshot: Codable, Identifiable {
     let image: String
     let width, height: Int
     
