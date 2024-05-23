@@ -19,14 +19,14 @@ struct Sidebar: View {
                 } detail: {
                     NavigationStack {
                         selection?.view()
-                            .navigationTitle(selection?.title ?? "Sibaro")
+                            .navigationTitle(selection?.title ?? "Seebaro")
                     }
                 }
             } else {
                 NavigationView {
                     sidebarList
                         .listStyle(.sidebar)
-                        .navigationTitle("Sibaro")
+                        .navigationTitle("Seebaro")
                     
                     Label("Select a tab from menu", systemImage: "sidebar.leading")
                         .foregroundStyle(.secondary)
@@ -53,7 +53,7 @@ struct Sidebar: View {
                             selection: $selection
                         ) {
                             item.view()
-                                .navigationTitle(selection?.title ?? "Sibaro")
+                                .navigationTitle(selection?.title ?? "Seebaro")
                         } label: {
                             Label(item.title, systemImage: item.icon)
                         }
@@ -62,7 +62,7 @@ struct Sidebar: View {
             }
         }
         .listStyle(.sidebar)
-        .navigationTitle("Sibaro")
+        .navigationTitle("Seebaro")
     }
 }
 
