@@ -27,11 +27,8 @@
 		03FDA3202A8D470F003D192D /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA31D2A8D470F003D192D /* Factory.swift */; };
 		03FDA3222A8D5FE2003D192D /* Stored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3212A8D5FE2003D192D /* Stored.swift */; };
 		03FDA3242A8DD4D3003D192D /* SingleAxisGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */; };
-<<<<<<< HEAD
 		114E16022AF5A31800092CAA /* Entitlements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E16012AF5A31800092CAA /* Entitlements.swift */; };
-=======
 		114E16062AF6407800092CAA /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E16052AF6407800092CAA /* Bundle.swift */; };
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 		117ED6F32A8B743400775CEC /* DirectoryReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EB2A8B743400775CEC /* DirectoryReader.m */; };
 		117ED6F42A8B743400775CEC /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6ED2A8B743400775CEC /* ApplicationService.swift */; };
 		117ED6F52A8B743400775CEC /* SystemApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6EE2A8B743400775CEC /* SystemApplication.swift */; };
@@ -39,7 +36,6 @@
 		117ED6F72A8B743400775CEC /* Invocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 117ED6F22A8B743400775CEC /* Invocator.m */; };
 		117ED6FA2A8B74FE00775CEC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117ED6F92A8B74FE00775CEC /* MobileCoreServices.framework */; platformFilter = ios; };
 		117ED7012A8B87D000775CEC /* String+VersionComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117ED7002A8B87D000775CEC /* String+VersionComparison.swift */; };
-<<<<<<< HEAD
 		11B3791A2AC6101E00C30816 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B379192AC6101E00C30816 /* File.swift */; };
 		11D5D8E52A8BBC6300A3C22B /* Dictionary+Apps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */; };
 		11DC23CB2AC495ED00692DBC /* SigningCredentialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC23CA2AC495ED00692DBC /* SigningCredentialService.swift */; };
@@ -55,7 +51,6 @@
 		11EEC0F72AC6BB5A006A466E /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 11EEC0F62AC6BB5A006A466E /* ZIPFoundation */; };
 		11EEC0F92AC6BF17006A466E /* SigningError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEC0F82AC6BF17006A466E /* SigningError.swift */; };
 		11EEC0FB2AC6C06A006A466E /* IPAProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EEC0FA2AC6C06A006A466E /* IPAProperties.swift */; };
-=======
 		1183A69B2AE1EC9900E2AD99 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183A69A2AE1EC9900E2AD99 /* NotificationService.swift */; };
 		1183A69F2AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1183A6AC2AE1ED1800E2AD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183A6AB2AE1ED1800E2AD99 /* AppDelegate.swift */; };
@@ -66,7 +61,6 @@
 		11EA59242AF6DA7A004E40AE /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		11EA59252AF6DA7A004E40AE /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = CF776C1F205844B1BEF00C35 /* Sentry */; };
 		11EA59272AF6DB8B004E40AE /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EA59262AF6DB8B004E40AE /* UpdateService.swift */; };
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 		363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */; };
 		363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */; };
 		363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */; };
@@ -169,13 +163,10 @@
 		03FDA31D2A8D470F003D192D /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		03FDA3212A8D5FE2003D192D /* Stored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stored.swift; sourceTree = "<group>"; };
 		03FDA3232A8DD4D3003D192D /* SingleAxisGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAxisGeometryReader.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		114E16012AF5A31800092CAA /* Entitlements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlements.swift; sourceTree = "<group>"; };
-=======
 		114E16052AF6407800092CAA /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		114E16072AF640CF00092CAA /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		114E16082AF640DB00092CAA /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 		117ED6E02A8B741E00775CEC /* Sibaro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sibaro-Bridging-Header.h"; sourceTree = "<group>"; };
 		117ED6EB2A8B743400775CEC /* DirectoryReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectoryReader.m; sourceTree = "<group>"; };
 		117ED6EC2A8B743400775CEC /* DirectoryReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectoryReader.h; sourceTree = "<group>"; };
@@ -191,7 +182,6 @@
 		117ED6FE2A8B755E00775CEC /* LSResourceProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSResourceProxy.h; sourceTree = "<group>"; };
 		117ED6FF2A8B755E00775CEC /* LSApplicationWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSApplicationWorkspace.h; sourceTree = "<group>"; };
 		117ED7002A8B87D000775CEC /* String+VersionComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+VersionComparison.swift"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		11B379192AC6101E00C30816 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Apps.swift"; sourceTree = "<group>"; };
 		11DC23CA2AC495ED00692DBC /* SigningCredentialService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigningCredentialService.swift; sourceTree = "<group>"; };
@@ -205,7 +195,6 @@
 		11EEC0F32AC6B9C8006A466E /* String+EncodedURI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EncodedURI.swift"; sourceTree = "<group>"; };
 		11EEC0F82AC6BF17006A466E /* SigningError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigningError.swift; sourceTree = "<group>"; };
 		11EEC0FA2AC6C06A006A466E /* IPAProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAProperties.swift; sourceTree = "<group>"; };
-=======
 		1183A6982AE1EC9900E2AD99 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183A69A2AE1EC9900E2AD99 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		1183A69C2AE1EC9900E2AD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,7 +204,6 @@
 		11C24C002AF652A60060020A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		11D5D8E42A8BBC6300A3C22B /* Dictionary+Apps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Apps.swift"; sourceTree = "<group>"; };
 		11EA59262AF6DB8B004E40AE /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 		363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -293,12 +281,9 @@
 				C604EB4E2A894AE400B18E0E /* SimpleKeychain in Frameworks */,
 				11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */,
 				C62BF8012A8A3059002CFFF9 /* MarkdownUI in Frameworks */,
-<<<<<<< HEAD
 				11DC23D82AC4ADCF00692DBC /* ZSignApple in Frameworks */,
 				11EEC0F72AC6BB5A006A466E /* ZIPFoundation in Frameworks */,
-=======
 				11EA59242AF6DA7A004E40AE /* (null) in Frameworks */,
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,13 +590,9 @@
 		C604EAF52A892FDA00B18E0E = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				C67979712A8A99180091BE25 /* Config.xcconfig */,
 				03D65F162AC7A16A009DA61F /* test_app.ipa */,
-=======
 				1183A6A92AE1ECCE00E2AD99 /* Sibaro-Info.plist */,
 				114E16042AF63F4A00092CAA /* XcodeConfigs */,
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 				C604EB002A892FDA00B18E0E /* App */,
 				03FDA2EF2A8BE9A6003D192D /* Service Base */,
 				C604EB2A2A89396A00B18E0E /* Networking */,
@@ -831,16 +812,13 @@
 				C62BF8002A8A3059002CFFF9 /* MarkdownUI */,
 				C67979742A8AA6E00091BE25 /* Nuke */,
 				C67979782A8AA6E00091BE25 /* NukeUI */,
-<<<<<<< HEAD
 				C67EB29A2AAA125E003CFFB1 /* Shimmer */,
 				11DC23D72AC4ADCF00692DBC /* ZSignApple */,
 				11EEC0EC2AC6B4A3006A466E /* Swifter */,
 				11EEC0F62AC6BB5A006A466E /* ZIPFoundation */,
-=======
 				11E619542AE3CF16001F353B /* OneSignalFramework */,
 				CF776C1F205844B1BEF00C35 /* Sentry */,
 				367E42A32B11214C00BE5D3A /* Toast */,
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 			);
 			productName = Sibaro;
 			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */;
@@ -1021,11 +999,8 @@
 				C60FFD782AA8EDBC00A51D38 /* ImagePreviewerView.swift in Sources */,
 				C604EB242A89333800B18E0E /* LoginView.swift in Sources */,
 				03E248DD2A8A9C4F00DDE525 /* I18nService.swift in Sources */,
-<<<<<<< HEAD
 				11EEC0F12AC6B815006A466E /* URL+CreateDirectory.swift in Sources */,
-=======
 				11C24C012AF652A60060020A /* Config.swift in Sources */,
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 				03FDA3202A8D470F003D192D /* Factory.swift in Sources */,
 				114E16062AF6407800092CAA /* Bundle.swift in Sources */,
 				C604EB2D2A89399700B18E0E /* AuthEndpoint.swift in Sources */,
@@ -1356,7 +1331,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-<<<<<<< HEAD
 		11DC23D62AC4ADCF00692DBC /* XCRemoteSwiftPackageReference "ZSignApple" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/EbrahimTahernejad/ZSignApple.git";
@@ -1379,7 +1353,8 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.9.17;
-=======
+			};
+		};
 		11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Seebaro/OneSignal-iOS-SDK";
@@ -1402,7 +1377,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.0;
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 			};
 		};
 		C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
@@ -1432,7 +1406,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-<<<<<<< HEAD
 		11DC23D72AC4ADCF00692DBC /* ZSignApple */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11DC23D62AC4ADCF00692DBC /* XCRemoteSwiftPackageReference "ZSignApple" */;
@@ -1447,7 +1420,7 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 11EEC0F52AC6BB5A006A466E /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
-=======
+		};
 		11E619522AE3CF16001F353B /* OneSignalExtension */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
@@ -1462,7 +1435,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 367E42A22B11214C00BE5D3A /* XCRemoteSwiftPackageReference "toast-swift" */;
 			productName = Toast;
->>>>>>> 9da783f455aab1ab13afc98f61bbf4474d99ee2f
 		};
 		C604EB4D2A894AE400B18E0E /* SimpleKeychain */ = {
 			isa = XCSwiftPackageProductDependency;

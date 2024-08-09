@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C604EAFD2A892FDA00B18E0E"
-               BuildableName = "Seebaro.app"
+               BuildableName = ".app"
                BlueprintName = "Sibaro"
                ReferencedContainer = "container:Sibaro.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C604EAFD2A892FDA00B18E0E"
-            BuildableName = "Seebaro.app"
+            BuildableName = ".app"
             BlueprintName = "Sibaro"
             ReferencedContainer = "container:Sibaro.xcodeproj">
          </BuildableReference>
@@ -61,7 +61,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C604EAFD2A892FDA00B18E0E"
-            BuildableName = "Seebaro.app"
+            BuildableName = ".app"
             BlueprintName = "Sibaro"
             ReferencedContainer = "container:Sibaro.xcodeproj">
          </BuildableReference>
