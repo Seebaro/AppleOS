@@ -32,6 +32,10 @@ extension Container {
     
     var installer: Factory<InstallerService> {
         Factory(self) { InstallerService() }
+    }   
+    
+    var update: Factory<UpdateServicable> {
+        Factory(self) { UpdateService() }
     }
 }
 

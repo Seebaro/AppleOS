@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OneSignalFramework
 
 extension ProfileView {
     class ViewModel: BaseViewModel {
@@ -21,6 +22,7 @@ extension ProfileView {
         
         
         private func _logout() async {
+            OneSignal.logout()
             storage.logout()
         }
         

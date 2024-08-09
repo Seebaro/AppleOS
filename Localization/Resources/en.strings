@@ -11,3 +11,13 @@
 "Product_Open" = "Open";
 "Product_Install" = "Get";
 "Product_Update" = "Update";
+
+// Update
+"UpdateAlert_Title" = "Update Available";
+"UpdateAlert_Body" = "To get the latest feature please update your application";
+"UpdateAlert_Confirm" = "Update";
+"UpdateAlert_Cancel" = "Not yet";
+
+"ForceUpdate_Title" = "Update Required";
+"ForceUpdate_Body" = "To continue using Seebaro please update your application";
+"ForceUpdate_Update" = "Update";

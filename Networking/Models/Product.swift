@@ -32,28 +32,28 @@ struct Product: Codable, Identifiable {
         version: "7.5",
         description: "یک متن به صورت تستی برای جایگزین کردن به عنوان یک تکست که در این جمله میگنجد تا بتونیم تست کنیم. ",
         ipaSize: "24.4 MB",
-        icon: "https://api.sibaro.mahsa.me/media/icons/5dca6e32-ec68-4b39-a953-a884f3eb32e8.png",
+        icon: "https://api.seebaro.ir/media/icons/5dca6e32-ec68-4b39-a953-a884f3eb32e8.png",
         bundleIdentifier: "com.rathasou.The-Spy-Camera",
         createdAt: Date(from: "2023-08-13T13:04:58.442039Z")!,
         updatedAt: Date(from: "2023-08-13T13:04:58.447161Z")!,
         screenshots: [
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/7e598724-2a5f-4a90-989f-68de3466b59b.jpg",
+                image: "https://api.seebaro.ir/media/screenshots/7e598724-2a5f-4a90-989f-68de3466b59b.jpg",
                 width: 392,
                 height: 696
             ),
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/ee5b8e0b-3982-4132-8d3d-52ddbad55759.jpg",
+                image: "https://api.seebaro.ir/media/screenshots/ee5b8e0b-3982-4132-8d3d-52ddbad55759.jpg",
                 width: 392,
                 height: 696
             ),
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/f70ac7a3-3309-4a9b-b661-52747ff2e554.jpg",
+                image: "https://api.seebaro.ir/media/screenshots/f70ac7a3-3309-4a9b-b661-52747ff2e554.jpg",
                 width: 392,
                 height: 696
             ),
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/9c1a4107-ebb9-4e64-a0ee-1a7cae0015c7.jpg",
+                image: "https://api.seebaro.ir/media/screenshots/9c1a4107-ebb9-4e64-a0ee-1a7cae0015c7.jpg",
                 width: 392,
                 height: 696
             ),
@@ -88,7 +88,7 @@ enum AppType: String, Codable {
     case game = "game"
 }
 
-struct Screenshot: Codable {
+struct Screenshot: Codable, Identifiable {
     let image: String
     let width, height: Int
     
@@ -107,17 +107,17 @@ struct Screenshot: Codable {
     static var mocks: [Screenshot] {
         return [
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/09b288d5-1c60-4c9f-bfcb-67933cd53de1.jpeg",
+                image: "https://api.seebaro.ir/media/screenshots/09b288d5-1c60-4c9f-bfcb-67933cd53de1.jpeg",
                 width: 1080,
                 height: 2152
             ),
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/d1170849-ee9d-4002-8f2b-099c4ea63fe7.jpeg",
+                image: "https://api.seebaro.ir/media/screenshots/d1170849-ee9d-4002-8f2b-099c4ea63fe7.jpeg",
                 width: 1080,
                 height: 1990
             ),
             .init(
-                image: "https://api.sibaro.mahsa.me/media/screenshots/96480465-2ce0-46f4-936b-b427f5d1e4d3.jpeg",
+                image: "https://api.seebaro.ir/media/screenshots/96480465-2ce0-46f4-936b-b427f5d1e4d3.jpeg",
                 width: 1080,
                 height: 2157
             ),
@@ -126,10 +126,14 @@ struct Screenshot: Codable {
 }
 
 struct AppManifest: Codable {
-    let manifest: String
+    let manifest: String?
     
     var url: URL? {
-        URL(string: "itms-services://?action=download-manifest&url=\(manifest)")
+        if let manifest {
+            URL(string: "itms-services://?action=download-manifest&url=\(manifest)")
+        } else {
+            nil
+        }
     }
 }
 

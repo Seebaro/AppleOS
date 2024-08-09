@@ -10,6 +10,8 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var viewModel = ViewModel()
+    @Environment(\.dismiss) private var dismiss
+    @Injected(\.openURL) var openURL
     
     #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
@@ -19,13 +21,74 @@ struct MainView: View {
         switch viewModel.state {
         case .loading:
             loading
-        case .main:
-            main
-        case .login:
-            LoginView()
+        case .main, .login:
+            mainBody
         case .error(let error):
             self.error(error)
         }
+    }
+
+    @ViewBuilder var mainBody: some View {
+        ZStack {
+            if viewModel.forceUpdate {
+                forceUpdateView
+            } else if viewModel.isAuthenticated {
+                #if os(iOS)
+                if horizontalSizeClass == .compact {
+                    TabNavigation()
+                } else {
+                    Sidebar()
+                }
+                #else
+                Sidebar()
+                #endif
+            } else {
+                LoginView()
+            }
+        }
+        .alert(
+            viewModel.i18n.UpdateAlert_Title,
+            isPresented: $viewModel.optionalUpdate
+        ) {
+            Button(viewModel.i18n.UpdateAlert_Cancel, role: .cancel) {
+                dismiss()
+            }
+            Button(viewModel.i18n.UpdateAlert_Confirm) {
+                viewModel.updateApplication()
+            }
+        } message: {
+            Text(viewModel.i18n.UpdateAlert_Body)
+        }
+    }
+    
+    @ViewBuilder var forceUpdateView: some View {
+        VStack(spacing: 35) {
+            Spacer()
+            Image("Logo")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 110, height: 110)
+                .cornerRadius(15)
+            Text(viewModel.i18n.ForceUpdate_Title)
+                .font(.largeTitle)
+            Text(viewModel.i18n.ForceUpdate_Body)
+            Spacer()
+            Button {
+                viewModel.updateApplication()
+            } label: {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill()
+                        .foregroundStyle(Color.accentColor)
+                    Text(viewModel.i18n.ForceUpdate_Update)
+                        .foregroundStyle(Color.white)
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 52)
+            }
+            .frame(maxWidth: .infinity)
+        }
+        .padding(.horizontal, 24)
     }
     
     @ViewBuilder var main: some View {

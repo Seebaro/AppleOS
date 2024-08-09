@@ -17,6 +17,7 @@ protocol SubmitAppRepositoryType {
 
 class SubmitAppRepository: BaseService, HTTPClient, SubmitAppRepositoryType {
     @Injected(\.storage) var storage
+    @Injected(\.update) var update
     
     func appSuggestion(
         name: String,

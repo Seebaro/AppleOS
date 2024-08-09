@@ -11,6 +11,10 @@ extension MainView {
         @Injected(\.storage) var storage
         @Injected(\.signer) var signer
         @Injected(\.installer) var installer
+        @Injected(\.update) var update
+        
+        @Published var forceUpdate: Bool = false
+        @Published var optionalUpdate: Bool = false
         
         var tmpFirst = true
         
@@ -39,10 +43,12 @@ extension MainView {
                     self?.loadSigningCredentials()
                 }
             }.store(in: &cancelBag)
+            update.updateSubject.filter { $0 }.map { _ in true }.assign(to: &$forceUpdate)
+            update.updateSubject.filter { !$0 }.map { _ in true }.assign(to: &$optionalUpdate)
         }
         
         var isAuthenticated: Bool {
-            storage.token != nil
+            storage.token != nil && storage.username != nil
         }
         
         private func loadSigningCredentials() {
@@ -63,5 +69,11 @@ extension MainView {
         case loading
         case error(Error)
         case login
+    }
+}
+
+extension MainView {
+    func updateApplication() {
+        update.update()
     }
 }
