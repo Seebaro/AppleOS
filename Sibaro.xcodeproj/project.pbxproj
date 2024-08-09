@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0366D9C72C66DF62004ADBCF /* ZSignApple in Frameworks */ = {isa = PBXBuildFile; productRef = 0366D9C62C66DF62004ADBCF /* ZSignApple */; };
+		0366D9CA2C66DF97004ADBCF /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 0366D9C92C66DF97004ADBCF /* ZIPFoundation */; };
 		03E248D22A8A75BD00DDE525 /* SibaroJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E248D12A8A75BD00DDE525 /* SibaroJSONDecoder.swift */; };
 		03E248D52A8A75FE00DDE525 /* Date+DecodeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E248D42A8A75FE00DDE525 /* Date+DecodeString.swift */; };
 		03E248DA2A8A9C2600DDE525 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 03E248D92A8A9C2600DDE525 /* en.strings */; };
@@ -239,10 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EA59252AF6DA7A004E40AE /* Sentry in Frameworks */,
+				0366D9CA2C66DF97004ADBCF /* ZIPFoundation in Frameworks */,
 				117ED6FA2A8B74FE00775CEC /* MobileCoreServices.framework in Frameworks */,
 				C67979792A8AA6E00091BE25 /* NukeUI in Frameworks */,
 				367E42A42B11214C00BE5D3A /* Toast in Frameworks */,
 				C67979752A8AA6E00091BE25 /* Nuke in Frameworks */,
+				0366D9C72C66DF62004ADBCF /* ZSignApple in Frameworks */,
 				C604EB4E2A894AE400B18E0E /* SimpleKeychain in Frameworks */,
 				11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */,
 				C62BF8012A8A3059002CFFF9 /* MarkdownUI in Frameworks */,
@@ -723,6 +727,8 @@
 				11E619542AE3CF16001F353B /* OneSignalFramework */,
 				CF776C1F205844B1BEF00C35 /* Sentry */,
 				367E42A32B11214C00BE5D3A /* Toast */,
+				0366D9C62C66DF62004ADBCF /* ZSignApple */,
+				0366D9C92C66DF97004ADBCF /* ZIPFoundation */,
 			);
 			productName = Sibaro;
 			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */;
@@ -763,6 +769,8 @@
 				11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
 				2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				367E42A22B11214C00BE5D3A /* XCRemoteSwiftPackageReference "toast-swift" */,
+				0366D9C52C66DF62004ADBCF /* XCRemoteSwiftPackageReference "ZSignApple" */,
+				0366D9C82C66DF97004ADBCF /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = C604EAFF2A892FDA00B18E0E /* Products */;
 			projectDirPath = "";
@@ -1217,6 +1225,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0366D9C52C66DF62004ADBCF /* XCRemoteSwiftPackageReference "ZSignApple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EbrahimTahernejad/ZSignApple.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.0.0;
+			};
+		};
+		0366D9C82C66DF97004ADBCF /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
 		11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Seebaro/OneSignal-iOS-SDK";
@@ -1268,6 +1292,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0366D9C62C66DF62004ADBCF /* ZSignApple */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0366D9C52C66DF62004ADBCF /* XCRemoteSwiftPackageReference "ZSignApple" */;
+			productName = ZSignApple;
+		};
+		0366D9C92C66DF97004ADBCF /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0366D9C82C66DF97004ADBCF /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
 		11E619522AE3CF16001F353B /* OneSignalExtension */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
