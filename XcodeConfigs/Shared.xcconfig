@@ -17,8 +17,8 @@ APP_NAME = Seebaro
 
 // MARK: - App Bundle Identifier
 BASE_BUNDLE_ID = com.seebaro.app
-DEV_TEAM = 4LBD36HY9T
-DEV_ACCOUNT = huzai
+DEV_TEAM = 4CUP7QK5GG
+DEV_ACCOUNT = han
 
 // MARK: - App URL Scheme
 URL_SCHEME = seebaro

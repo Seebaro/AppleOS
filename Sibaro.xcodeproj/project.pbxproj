@@ -922,7 +922,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 4LBD36HY9T;
+				DEVELOPMENT_TEAM = $(DEV_TEAM);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -952,7 +952,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 4LBD36HY9T;
+				DEVELOPMENT_TEAM = $(DEV_TEAM);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
@@ -1107,7 +1107,7 @@
 				CURRENT_PROJECT_VERSION = "$(APP_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 4LBD36HY9T;
+				DEVELOPMENT_TEAM = $(DEV_TEAM);
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sibaro-Info.plist";
@@ -1153,7 +1153,7 @@
 				CURRENT_PROJECT_VERSION = "$(APP_BUNDLE_VERSION)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 4LBD36HY9T;
+				DEVELOPMENT_TEAM = $(DEV_TEAM);
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Sibaro-Info.plist";
