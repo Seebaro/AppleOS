@@ -94,11 +94,8 @@ struct LoginView: View {
                 
                 // MARK: - Login button
                 ZStack {
-                    ProgressView()
-                        .opacity(viewModel.loading ? 1 : 0)
-                    
                     Button(action: viewModel.login) {
-                        Text("Login")
+                        Text(viewModel.loading ? "" : "Login")
                             .font(.body)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity)
@@ -108,7 +105,12 @@ struct LoginView: View {
                     .controlSize(.large)
                     .buttonStyle(.borderedProminent)
                     .padding(.vertical)
-                    .opacity(viewModel.loading ? 0 : 1)
+                    .disabled(viewModel.isLoginButtonDisabled)
+
+                    // MARK: ProgressView
+                    if viewModel.loading {
+                        ProgressView()
+                    }
                 }
                 
                 // MARK: - Response message
