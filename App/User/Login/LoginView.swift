@@ -105,7 +105,7 @@ struct LoginView: View {
                     .controlSize(.large)
                     .buttonStyle(.borderedProminent)
                     .padding(.vertical)
-                    .disabled(viewModel.isNoSubmittable)
+                    .disabled(viewModel.isNotSubmittable)
 
                     // MARK: ProgressView
                     if viewModel.loading {
