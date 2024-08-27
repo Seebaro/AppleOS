@@ -26,7 +26,7 @@ extension LoginView {
 
         @Published var message: String = ""
 
-        var isNoSubmittable: Bool {
+        var isNotSubmittable: Bool {
             username.isEmpty || password.isEmpty || loading
         }
 
