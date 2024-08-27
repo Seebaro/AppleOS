@@ -18,23 +18,17 @@ extension LoginView {
 
         @Injected(\.storage) var storage
 
-        @Published var username: String = "" {
-            didSet {
-                updateLoginButtonState()
-            }
-        }
+        @Published var username: String = ""
 
-        @Published var password: String = "" {
-            didSet {
-                updateLoginButtonState()
-            }
-        }
+        @Published var password: String = ""
 
         @Published var loading: Bool = false
 
         @Published var message: String = ""
 
-        @Published var isLoginButtonDisabled = true
+        var isNoSubmittable: Bool {
+            username.isEmpty || password.isEmpty || loading
+        }
 
         // MARK: Login
         nonisolated func login() {
@@ -45,20 +39,16 @@ extension LoginView {
 
         private func _login() async {
             loading = true
-            isLoginButtonDisabled = true
             message = ""
-
             do {
                 let response = try await auth.login(username: username, password: password)
                 OneSignal.login(externalId: "\(response.userId)", token: response.access)
                 storage.token = response.access
                 storage.username = username
                 loading = false
-                isLoginButtonDisabled = false
             } catch {
                 handle(error)
                 loading = false
-                isLoginButtonDisabled = false
             }
         }
 
@@ -75,16 +65,6 @@ extension LoginView {
             default:
                 message = error.description
             }
-        }
-
-        // MARK: updateLoginButtonState
-        private func updateLoginButtonState() {
-            guard loading == false else {
-                self.isLoginButtonDisabled = true
-                return
-            }
-            let isDisabled = username.isEmpty || password.isEmpty
-            self.isLoginButtonDisabled = isDisabled
         }
     }
 }
