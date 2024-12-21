@@ -28,6 +28,10 @@ extension Container {
     var update: Factory<UpdateServicable> {
         Factory(self) { UpdateService() }
     }
+    
+    var ipaFileManager: Factory<IPAFileManager> {
+        Factory(self) { SBRIPAFileManager() }
+    }
 }
 
 
@@ -43,6 +47,17 @@ extension Container {
     
     var submitAppRepository: Factory<SubmitAppRepositoryType> {
         Factory(self) { SubmitAppRepository() }
+    }
+}
+
+//MARK: - System intances
+extension Container {
+    var fileManager: Factory<FileManager> {
+        Factory(self) { FileManager.default }
+    }
+    
+    var notificationCenter: Factory<NotificationCenter> {
+        Factory(self) { NotificationCenter.default }
     }
 }
 

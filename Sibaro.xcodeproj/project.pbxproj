@@ -46,6 +46,16 @@
 		363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */; };
 		363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */; };
 		363A1BE62A8D25A300148CBB /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */; };
+		367AF55A2D01DAA50065A3B9 /* FileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF5572D01DAA50065A3B9 /* FileManagerView.swift */; };
+		367AF55B2D01DAA50065A3B9 /* FileManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF5582D01DAA50065A3B9 /* FileManagerViewModel.swift */; };
+		367AF55D2D01DAF40065A3B9 /* DocumnetPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF55C2D01DAF40065A3B9 /* DocumnetPicker.swift */; };
+		367AF5602D01DB800065A3B9 /* FileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF55F2D01DB800065A3B9 /* FileDetailView.swift */; };
+		367AF5642D0203210065A3B9 /* FileListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF5632D0203210065A3B9 /* FileListItem.swift */; };
+		367AF5692D02616B0065A3B9 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 367AF5682D02616B0065A3B9 /* ZIPFoundation */; };
+		367AF56B2D0261DC0065A3B9 /* IpaFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF56A2D0261DC0065A3B9 /* IpaFile.swift */; };
+		367AF56D2D026D340065A3B9 /* IPAUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF56C2D026D340065A3B9 /* IPAUtilities.swift */; };
+		367AF56F2D0B3DFE0065A3B9 /* IPAFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF56E2D0B3DFE0065A3B9 /* IPAFileManager.swift */; };
+		367AF5712D0DFAFB0065A3B9 /* Notification+NewIPAAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367AF5702D0DFAEC0065A3B9 /* Notification+NewIPAAdded.swift */; };
 		36B7CE962A8FCBE1000ABD7A /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B7CE952A8FCBE1000ABD7A /* Password.swift */; };
 		36FE9D052A8E4BC300A71B12 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */; };
 		36FE9D072A8E4BD000A71B12 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */; };
@@ -172,6 +182,15 @@
 		363A1BDE2A8C8DF500148CBB /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
 		363A1BE22A8CA8E700148CBB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		363A1BE52A8D25A300148CBB /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
+		367AF5572D01DAA50065A3B9 /* FileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerView.swift; sourceTree = "<group>"; };
+		367AF5582D01DAA50065A3B9 /* FileManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewModel.swift; sourceTree = "<group>"; };
+		367AF55C2D01DAF40065A3B9 /* DocumnetPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumnetPicker.swift; sourceTree = "<group>"; };
+		367AF55F2D01DB800065A3B9 /* FileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDetailView.swift; sourceTree = "<group>"; };
+		367AF5632D0203210065A3B9 /* FileListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListItem.swift; sourceTree = "<group>"; };
+		367AF56A2D0261DC0065A3B9 /* IpaFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpaFile.swift; sourceTree = "<group>"; };
+		367AF56C2D026D340065A3B9 /* IPAUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAUtilities.swift; sourceTree = "<group>"; };
+		367AF56E2D0B3DFE0065A3B9 /* IPAFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAFileManager.swift; sourceTree = "<group>"; };
+		367AF5702D0DFAEC0065A3B9 /* Notification+NewIPAAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+NewIPAAdded.swift"; sourceTree = "<group>"; };
 		36B7CE952A8FCBE1000ABD7A /* Password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password.swift; sourceTree = "<group>"; };
 		36FE9D042A8E4BC300A71B12 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		36FE9D062A8E4BD000A71B12 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
@@ -245,6 +264,7 @@
 				11E619552AE3CF16001F353B /* OneSignalFramework in Frameworks */,
 				C62BF8012A8A3059002CFFF9 /* MarkdownUI in Frameworks */,
 				11EA59242AF6DA7A004E40AE /* (null) in Frameworks */,
+				367AF5692D02616B0065A3B9 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +390,7 @@
 				117ED6E42A8B743400775CEC /* Private Headers */,
 				117ED6EA2A8B743400775CEC /* DirectoryReader */,
 				117ED6F02A8B743400775CEC /* Invocator */,
+				367AF56C2D026D340065A3B9 /* IPAUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -487,6 +508,44 @@
 			path = "Product Details";
 			sourceTree = "<group>";
 		};
+		367AF5592D01DAA50065A3B9 /* File Manager */ = {
+			isa = PBXGroup;
+			children = (
+				367AF5612D01DB990065A3B9 /* File List */,
+				367AF5662D0203370065A3B9 /* File Item */,
+				367AF55E2D01DB690065A3B9 /* File Details */,
+				367AF55C2D01DAF40065A3B9 /* DocumnetPicker.swift */,
+				367AF56A2D0261DC0065A3B9 /* IpaFile.swift */,
+				367AF56E2D0B3DFE0065A3B9 /* IPAFileManager.swift */,
+			);
+			path = "File Manager";
+			sourceTree = "<group>";
+		};
+		367AF55E2D01DB690065A3B9 /* File Details */ = {
+			isa = PBXGroup;
+			children = (
+				367AF55F2D01DB800065A3B9 /* FileDetailView.swift */,
+			);
+			path = "File Details";
+			sourceTree = "<group>";
+		};
+		367AF5612D01DB990065A3B9 /* File List */ = {
+			isa = PBXGroup;
+			children = (
+				367AF5572D01DAA50065A3B9 /* FileManagerView.swift */,
+				367AF5582D01DAA50065A3B9 /* FileManagerViewModel.swift */,
+			);
+			path = "File List";
+			sourceTree = "<group>";
+		};
+		367AF5662D0203370065A3B9 /* File Item */ = {
+			isa = PBXGroup;
+			children = (
+				367AF5632D0203210065A3B9 /* FileListItem.swift */,
+			);
+			path = "File Item";
+			sourceTree = "<group>";
+		};
 		36FE9D032A8E4B9D00A71B12 /* Change Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +591,7 @@
 				C604EB202A8932E900B18E0E /* User */,
 				C604EB1A2A89314900B18E0E /* Products */,
 				C604EB102A89309700B18E0E /* Resources */,
+				367AF5592D01DAA50065A3B9 /* File Manager */,
 				11C24C002AF652A60060020A /* Config.swift */,
 				03FDA2F62A8C110A003D192D /* SibaroAppServices.swift */,
 				C604EB012A892FDA00B18E0E /* SibaroApp.swift */,
@@ -657,6 +717,7 @@
 		C667B4D42A89872800B2427D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				367AF5702D0DFAEC0065A3B9 /* Notification+NewIPAAdded.swift */,
 				C61B1ADB2A8E805800F3AD27 /* NSTextView+Extensions.swift */,
 				C667B4D52A89873400B2427D /* String+Extensions.swift */,
 				C60FFD732AA8ECD400A51D38 /* View+Extensions.swift */,
@@ -720,6 +781,7 @@
 				C67979782A8AA6E00091BE25 /* NukeUI */,
 				11E619542AE3CF16001F353B /* OneSignalFramework */,
 				CF776C1F205844B1BEF00C35 /* Sentry */,
+				367AF5682D02616B0065A3B9 /* ZIPFoundation */,
 			);
 			productName = Sibaro;
 			productReference = C604EAFE2A892FDA00B18E0E /* Seebaro Dev.app */;
@@ -759,6 +821,7 @@
 				C67979732A8AA6E00091BE25 /* XCRemoteSwiftPackageReference "Nuke" */,
 				11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
 				2FF9CD89667E4E78A5DD055A /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				367AF5672D02616B0065A3B9 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 			);
 			productRefGroup = C604EAFF2A892FDA00B18E0E /* Products */;
 			projectDirPath = "";
@@ -824,6 +887,7 @@
 				C604EB372A8939BB00B18E0E /* RequestError.swift in Sources */,
 				C6CF976A2A8BDB090035210F /* HapticFeedback.swift in Sources */,
 				C604EB502A89546F00B18E0E /* EmptyStateView.swift in Sources */,
+				367AF56F2D0B3DFE0065A3B9 /* IPAFileManager.swift in Sources */,
 				03FDA30A2A8C169A003D192D /* Locking.swift in Sources */,
 				03FDA3242A8DD4D3003D192D /* SingleAxisGeometryReader.swift in Sources */,
 				C604EB522A895EC000B18E0E /* ProductItemView.swift in Sources */,
@@ -836,6 +900,7 @@
 				C67E59A12ABB5964009FCC86 /* Shimmer.swift in Sources */,
 				117ED6F42A8B743400775CEC /* ApplicationService.swift in Sources */,
 				C604EB442A893D3500B18E0E /* ProductsEndpoint.swift in Sources */,
+				367AF56B2D0261DC0065A3B9 /* IpaFile.swift in Sources */,
 				03FDA31F2A8D470F003D192D /* Container.swift in Sources */,
 				C604EB3F2A893ADB00B18E0E /* Product.swift in Sources */,
 				C604EB192A8930C400B18E0E /* MainView.swift in Sources */,
@@ -849,6 +914,7 @@
 				C604EB382A8939BB00B18E0E /* Endpoint.swift in Sources */,
 				03E248D52A8A75FE00DDE525 /* Date+DecodeString.swift in Sources */,
 				C60FFD742AA8ECD400A51D38 /* View+Extensions.swift in Sources */,
+				367AF5602D01DB800065A3B9 /* FileDetailView.swift in Sources */,
 				03FDA2F72A8C110A003D192D /* SibaroAppServices.swift in Sources */,
 				03FDA3112A8C1A48003D192D /* ViewModel.swift in Sources */,
 				C61B1ADC2A8E805800F3AD27 /* NSTextView+Extensions.swift in Sources */,
@@ -860,19 +926,24 @@
 				C604EB422A893B6600B18E0E /* Errors.swift in Sources */,
 				11D5D8E52A8BBC6300A3C22B /* Dictionary+Apps.swift in Sources */,
 				C662A5562AB30130001A8FEE /* ScreenshotPortraitView.swift in Sources */,
+				367AF55A2D01DAA50065A3B9 /* FileManagerView.swift in Sources */,
+				367AF55B2D01DAA50065A3B9 /* FileManagerViewModel.swift in Sources */,
 				03FDA3182A8D0C1C003D192D /* ProductItemViewModel.swift in Sources */,
 				C667B4D62A89873400B2427D /* String+Extensions.swift in Sources */,
 				11EA59272AF6DB8B004E40AE /* UpdateService.swift in Sources */,
 				C64E692B2AB257BD0057A8F7 /* SettingsItemView.swift in Sources */,
 				C667B4D32A897F1300B2427D /* ProductDetailsView.swift in Sources */,
 				C60FFD762AA8ED6900A51D38 /* ScreenshotView.swift in Sources */,
+				367AF5712D0DFAFB0065A3B9 /* Notification+NewIPAAdded.swift in Sources */,
 				C662A5542AB3008F001A8FEE /* ScreenshotLandscapeView.swift in Sources */,
 				363A1BDF2A8C8DF500148CBB /* ProductsListViewModel.swift in Sources */,
 				117ED6F52A8B743400775CEC /* SystemApplication.swift in Sources */,
+				367AF55D2D01DAF40065A3B9 /* DocumnetPicker.swift in Sources */,
 				C604EB1C2A89316C00B18E0E /* ProductsListView.swift in Sources */,
 				474D63722AAC4FD60003AF6D /* ObservableScrollView.swift in Sources */,
 				C604EB182A8930C400B18E0E /* TabNavigation.swift in Sources */,
 				363A1BE32A8CA8E700148CBB /* ProfileViewModel.swift in Sources */,
+				367AF56D2D026D340065A3B9 /* IPAUtilities.swift in Sources */,
 				03FDA31E2A8D470F003D192D /* Injections.swift in Sources */,
 				C604EB342A8939BB00B18E0E /* HTTPContentType.swift in Sources */,
 				117ED7012A8B87D000775CEC /* String+VersionComparison.swift in Sources */,
@@ -880,6 +951,7 @@
 				C604EB172A8930C400B18E0E /* Sidebar.swift in Sources */,
 				C604EB272A89337400B18E0E /* VisualEffectBlur.swift in Sources */,
 				C604EB352A8939BB00B18E0E /* HTTPMethod.swift in Sources */,
+				367AF5642D0203210065A3B9 /* FileListItem.swift in Sources */,
 				C60FFD782AA8EDBC00A51D38 /* ImagePreviewerView.swift in Sources */,
 				C604EB242A89333800B18E0E /* LoginView.swift in Sources */,
 				03E248DD2A8A9C4F00DDE525 /* I18nService.swift in Sources */,
@@ -1229,6 +1301,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		367AF5672D02616B0065A3B9 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.19;
+			};
+		};
 		C604EB4C2A894AE400B18E0E /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/SimpleKeychain";
@@ -1265,6 +1345,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 11E619512AE3CF16001F353B /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalFramework;
+		};
+		367AF5682D02616B0065A3B9 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 367AF5672D02616B0065A3B9 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
 		};
 		C604EB4D2A894AE400B18E0E /* SimpleKeychain */ = {
 			isa = XCSwiftPackageProductDependency;

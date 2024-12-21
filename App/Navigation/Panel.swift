@@ -11,6 +11,7 @@ enum Panel: CaseIterable {
     case apps
     case games
     case profile
+    case files
     
     var title: String {
         switch self {
@@ -20,6 +21,8 @@ enum Panel: CaseIterable {
             return "Games"
         case .profile:
             return "Profile"
+        case .files:
+            return "Files"
         }
     }
     
@@ -31,6 +34,8 @@ enum Panel: CaseIterable {
             return "gamecontroller"
         case .profile:
             return "person.crop.circle"
+        case .files:
+            return "folder"
         }
     }
     
@@ -42,6 +47,8 @@ enum Panel: CaseIterable {
             ProductsListView(type: .game)
         case .profile:
             ProfileView()
+        case .files:
+            FileManagerView()
         }
     }
 }
