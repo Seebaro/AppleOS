@@ -35,35 +35,41 @@ struct FileManagerView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List {
-                    ForEach(viewModel.files) { ipa in
-                        NavigationLink(
-                            destination: FileDetailView(
-                                ipa: ipa,
-                                ipaInfo: viewModel.getIPAInformation(ipa)
-                            )
-                        ) {
-                            FileListItem(ipaFile: ipa)
-                                .swipeActions(allowsFullSwipe: false) {
-                                    Button(role: .destructive) {
-                                        viewModel.deleteIPA(ipa)
-                                    } label: {
-                                        Label("Delete", systemImage: "trash")
+                if viewModel.files.isEmpty {
+                    Text("The are no files yet\nuse **+** to add files")
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 16, design: .rounded))
+                } else {
+                    List {
+                        ForEach(viewModel.files) { ipa in
+                            NavigationLink(
+                                destination: FileDetailView(
+                                    ipa: ipa,
+                                    ipaInfo: viewModel.getIPAInformation(ipa)
+                                )
+                            ) {
+                                FileListItem(ipaFile: ipa)
+                                    .swipeActions(allowsFullSwipe: false) {
+                                        Button(role: .destructive) {
+                                            viewModel.deleteIPA(ipa)
+                                        } label: {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+                                        
+                                        Button {
+                                            viewModel.signIPA(ipa)
+                                        } label: {
+                                            Label("Sign", systemImage: "pencil")
+                                        }
+                                        
+                                        Button {
+                                            viewModel.installIPA(ipa)
+                                        } label: {
+                                            Label("Install", systemImage: "arrow.down.circle")
+                                        }
+                                        .tint(.green)
                                     }
-                                    
-                                    Button {
-                                        viewModel.signIPA(ipa)
-                                    } label: {
-                                        Label("Sign", systemImage: "pencil")
-                                    }
-                                    
-                                    Button {
-                                        viewModel.installIPA(ipa)
-                                    } label: {
-                                        Label("Install", systemImage: "arrow.down.circle")
-                                    }
-                                    .tint(.green)
-                                }
+                            }
                         }
                     }
                 }
@@ -78,7 +84,7 @@ struct FileManagerView: View {
                         statusMessage = "Error: \(error.localizedDescription)"
                     }
                 }
-            }.alert("", isPresented: $showAlert) {
+            }.alert(statusMessage ?? "", isPresented: $showAlert) {
                 Button("Dismiss", role: .cancel, action: {
                     showAlert.toggle()
                     statusMessage = nil
