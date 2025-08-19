@@ -1,9 +1,8 @@
 //
 //  Shimmer.swift
+//  SwiftUI-Shimmer
+//  Created by Vikram Kriplaney on 23.03.21.
 //  Sibaro
-//
-//  Created by Armin on 9/20/23.
-//
 
 import SwiftUI
 
